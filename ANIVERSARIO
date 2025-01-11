@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Marcelly!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1542626991-ecbebed94495?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .header {
+            padding: 20px;
+            background-color: rgba(255, 0, 128, 0.8);
+            color: yellow;
+            text-shadow: 2px 2px 4px #000;
+            animation: pulse 2s infinite;
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        .messages {
+            margin: 20px auto;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .card {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 200px;
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: rotate(2deg) scale(1.1);
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 128, 0.9);
+            color: #fff;
+            font-size: 1.2rem;
+            border-top: 5px dashed yellow;
+        }
+        .reveal-button {
+            background: radial-gradient(circle, #ff4081, #ff6ec7);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px #000;
+            animation: bounce 1s infinite;
+        }
+        #special-message {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            display: none;
+            color: #ffdf00;
+            text-shadow: 2px 2px 5px #000;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎉 Feliz 23º Aniversário, Marcelly! 🎉</h1>
+        <p>Hoje é um dia especial, feito só para você, nossa diva querida! 💖</p>
+    </div>
+
+    <div class="messages">
+        <div class="card">
+            <p>Mar, que seu dia seja tão lindo quanto você! 🎈</p>
+        </div>
+        <div class="card">
+            <p>Querida best, que todos os seus sonhos se realizem neste novo ano! 🌟</p>
+        </div>
+        <div class="card">
+            <p>Amiga incrível, obrigada por sempre estar ao meu lado! ❤️</p>
+        </div>
+        <div class="card">
+            <p>Você merece tudo de bom nesse mundo, nossa diva! 🌸</p>
+        </div>
+        <div class="card">
+            <p>Continue sendo essa pessoa maravilhosa que ilumina nossas vidas! ☀️</p>
+        </div>
+        <div class="card">
+            <p>Marcelly, você é simplesmente única e insubstituível! 🎁</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button class="reveal-button" onclick="revealMessage()">💌 Mensagem Especial 💌</button>
+        <p id="special-message">🎁 Mar, você é nossa melhor amiga e inspiração! Que este novo ano seja cheio de conquistas e momentos inesquecíveis! Te amamos muito, diva! 🎉</p>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('special-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
