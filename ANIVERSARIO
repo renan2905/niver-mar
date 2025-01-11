@@ -16,23 +16,26 @@
             overflow-x: hidden;
         }
         .header {
-            padding: 20px;
+            padding: 40px 0;
             background-color: rgba(255, 0, 128, 0.8);
             color: yellow;
             text-shadow: 2px 2px 4px #000;
             animation: pulse 2s infinite;
         }
         .header h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin: 0;
         }
+        .header p {
+            font-size: 1.5rem;
+        }
         .messages {
-            margin: 20px auto;
-            max-width: 800px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
             animation: fadeIn 3s ease-in-out;
         }
         .card {
@@ -40,17 +43,20 @@
             color: white;
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            width: 200px;
-            transform: rotate(-2deg);
+            padding: 25px;
             transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            text-align: center;
         }
         .card:hover {
-            transform: rotate(2deg) scale(1.1);
+            transform: translateY(-10px);
         }
         .footer {
-            margin-top: 30px;
-            padding: 20px;
+            padding: 30px 0;
             background-color: rgba(0, 0, 128, 0.9);
             color: #fff;
             font-size: 1.2rem;
@@ -65,77 +71,4 @@
             font-size: 1.5rem;
             cursor: pointer;
             text-shadow: 1px 1px 2px #000;
-            animation: bounce 1s infinite;
-        }
-        #special-message {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            display: none;
-            color: #ffdf00;
-            text-shadow: 2px 2px 5px #000;
-        }
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>🎉 Feliz 23º Aniversário, Marcelly! 🎉</h1>
-        <p>Hoje é um dia especial, feito só para você, nossa diva querida! 💖</p>
-    </div>
-
-    <div class="messages">
-        <div class="card">
-            <p>Mar, que seu dia seja tão lindo quanto você! 🎈</p>
-        </div>
-        <div class="card">
-            <p>Querida best, que todos os seus sonhos se realizem neste novo ano! 🌟</p>
-        </div>
-        <div class="card">
-            <p>Amiga incrível, obrigada por sempre estar ao meu lado! ❤️</p>
-        </div>
-        <div class="card">
-            <p>Você merece tudo de bom nesse mundo, nossa diva! 🌸</p>
-        </div>
-        <div class="card">
-            <p>Continue sendo essa pessoa maravilhosa que ilumina nossas vidas! ☀️</p>
-        </div>
-        <div class="card">
-            <p>Marcelly, você é simplesmente única e insubstituível! 🎁</p>
-        </div>
-    </div>
-
-    <div class="footer">
-        <button class="reveal-button" onclick="revealMessage()">💌 Mensagem Especial 💌</button>
-        <p id="special-message">🎁 Mar, você é nossa melhor amiga e inspiração! Que este novo ano seja cheio de conquistas e momentos inesquecíveis! Te amamos muito, diva! 🎉</p>
-    </div>
-
-    <script>
-        function revealMessage() {
-            document.getElementById('special-message').style.display = 'block';
-        }
-    </script>
-</body>
-</html>
+            animation: bounce 1s inf
